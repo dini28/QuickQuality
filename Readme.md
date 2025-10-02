@@ -33,8 +33,6 @@ images/
   shubham.jpg
 ```
 
-<video controls src="QQ.mp4" title="Video"></video>
-
 ## Getting Started
 
 1. **Clone or Download the Repository**
