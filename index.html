@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Quick Quality - Milkoscan</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Quick Quality Logo" class="logo-image">
+                    <span class="logo-text">Quick Quality</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#team" class="nav-link">Team</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+
+                    <a href="#" class="login-btn" onclick="openModal('loginModal')">
+                        <i class="ri-login-box-line"></i>
+                        Login
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg class="icon icon-menu" id="menuIcon" viewBox="0 0 24 24">
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                    <svg class="icon icon-menu" id="closeIcon" viewBox="0 0 24 24" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="#home" class="mobile-nav-link">Home</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#team" class="mobile-nav-link">Team</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+
+                    <a href="#" class="mobile-login-btn" onclick="openModal('loginModal')">
+                        <i class="ri-login-box-line"></i>
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="header_container" id="home">
+        <div class="header_content">
+            <div class="header_text">
+                <h1>Revolutionizing Milk Quality Testing with Milkoscan</h1>
+                <p>
+                    Milk is a vital source of nutrition, consumed daily by millions worldwide. Our Milkoscan device
+                    ensures you get pure, unadulterated milk by detecting harmful substances instantly. Protect your
+                    family's health with our innovative, portable milk testing solution.
+                </p>
+                <div class="header_buttons">
+                    <button class="btn-primary" onclick="openModal('orderModal')">
+                        <i class="ri-shopping-cart-line"></i> Order Now
+                    </button>
+                    <a href="#about" class="btn-secondary">
+                        <i class="ri-play-circle-line"></i> Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="header_image">
+                <img src="images/milk.png" alt="Milkoscan Device - Revolutionary milk quality testing solution">
+            </div>
+        </div>
+    </header>
+
+    <!-- Common Adulterants Section -->
+    <section class="deals_container">
+        <div class="common_header">
+            <h2 class="section_header">Common Adulterants Found in Milk</h2>
+            <p class="section_description">Protect your family from these harmful substances commonly found in
+                adulterated milk</p>
+        </div>
+        <div class="deals_grid">
+            <div class="deals_card">
+                <span><i class="ri-water-percent-line"></i></span>
+                <h4>Urea</h4>
+                <p>Used to increase protein content artificially, causing kidney damage and serious health
+                    complications.</p>
+            </div>
+            <div class="deals_card">
+                <span><i class="ri-drop-line"></i></span>
+                <h4>Water</h4>
+                <p>Added to increase quantity, but it dilutes essential nutrients and vitamins.</p>
+            </div>
+            <div class="deals_card">
+                <span><i class="ri-contrast-drop-line"></i></span>
+                <h4>Detergent/Shampoo</h4>
+                <p>Contains surfactants like sodium lauryl sulfate, which create bubbles and give milk a frothy
+                    appearance.</p>
+            </div>
+            <div class="deals_card">
+                <span><i class="ri-flask-line"></i></span>
+                <h4>Starch</h4>
+                <p>Added to increase thickness and make milk appear richer, but reduces nutritional value.</p>
+            </div>
+            <div class="deals_card">
+                <span><i class="ri-medicine-bottle-line"></i></span>
+                <h4>Formalin</h4>
+                <p>Used as a preservative but is highly toxic and can cause cancer and other serious diseases.</p>
+            </div>
+            <div class="deals_card">
+                <span><i class="ri-test-tube-line"></i></span>
+                <h4>Hydrogen Peroxide</h4>
+                <p>Used to increase shelf life but can cause gastric irritation and damage to internal organs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Product Section -->
+    <section class="about_container" id="about">
+        <div class="common_header">
+            <h2 class="section_header">About Milkoscan</h2>
+            <p class="section_description">Our passion for health and safety drives us to develop cutting-edge
+                technology that ensures milk
+                purity. Milkoscan is designed to detect adulteration instantly, giving you peace of mind about the
+                milk you
+                consume.</p>
+        </div>
+        <div class="about_content">
+            <div class="about_image">
+                <img src="images/product.png" alt="Milkoscan Product" />
+            </div>
+
+            <div class="about_grid">
+                <div class="about_card">
+                    <h3><span>What Our Product Does</span></h3>
+                    <p>
+                        Milkoscan is an advanced milk adulteration detection system designed to ensure the purity and
+                        quality of milk by detecting harmful adulterants in real-time.
+                    </p>
+                </div>
+
+                <div class="about_card">
+                    <h3><span>How We're Different</span></h3>
+                    <p>
+                        Compact and lightweight design with no lab dependency. Get instant results anywhere, anytime
+                        with our portable solution.
+                    </p>
+                </div>
+
+                <div class="about_card">
+                    <h3><span>How We Help</span></h3>
+                    <p>
+                        Real-time testing with accurate results within seconds. Easy-to-use interface that anyone can
+                        operate without technical expertise.
+                    </p>
+                </div>
+
+                <div class="about_card">
+                    <h3><span>Success Story</span></h3>
+                    <p>
+                        Our portable milk adulteration detection device bridges the gap between safety and convenience,
+                        protecting thousands of families daily.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about_stats">
+            <div class="stats_grid">
+                <div class="stat_item">
+                    <span class="stat_number">99.9%</span>
+                    <span class="stat_label">Accuracy Rate</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_number">10K+</span>
+                    <span class="stat_label">Families Protected</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_number">30 Sec</span>
+                    <span class="stat_label">Detection Time</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_number">24/7</span>
+                    <span class="stat_label">Support Available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features Section -->
+    <section class="features_container">
+        <div class="common_header">
+            <h2 class="section_header">Why Choose Milkoscan?</h2>
+            <p class="section_description">Advanced technology meets user-friendly design</p>
+        </div>
+        <div class="features_grid">
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-time-line"></i>
+                </div>
+                <h3>Instant Results</h3>
+                <p>Get accurate milk purity results within 30 seconds of testing</p>
+            </div>
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-smartphone-line"></i>
+                </div>
+                <h3>Smart Technology</h3>
+                <p>Advanced sensors with mobile app connectivity for detailed analysis</p>
+            </div>
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-shield-check-line"></i>
+                </div>
+                <h3>99% Accuracy</h3>
+                <p>Highly accurate detection of multiple adulterants with minimal false positives</p>
+            </div>
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-hand-coin-line"></i>
+                </div>
+                <h3>Cost Effective</h3>
+                <p>Affordable solution that pays for itself by ensuring pure milk consumption</p>
+            </div>
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-rocket-line"></i>
+                </div>
+                <h3>Portable Design</h3>
+                <p>Compact and lightweight, perfect for home use or on-the-go testing</p>
+            </div>
+            <div class="feature_card">
+                <div class="feature_icon">
+                    <i class="ri-customer-service-2-line"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Dedicated customer support team available to assist with any queries or issues</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team_container" id="team">
+        <div class="common_header">
+            <h2 class="section_header">Our Team</h2>
+            <p class="section_description">Meet the innovative minds behind Milkoscan technology</p>
+        </div>
+
+        <div class="team_grid">
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/manish.jpg" alt="Manish Sahu" />
+                </div>
+                <div class="team_info">
+                    <h4>Manish Sahu</h4>
+                    <p>Hardware Engineer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/mahak.jpg" alt="Mahak Rahi" />
+                </div>
+                <div class="team_info">
+                    <h4>Mahak Rahi</h4>
+                    <p>UI/UX Designer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/dipesh.jpg" alt="Dipesh Soni" />
+                </div>
+                <div class="team_info">
+                    <h4>Dipesh Soni</h4>
+                    <p>Web Developer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/shubham.jpg" alt="Shubham Vaishnav" />
+                </div>
+                <div class="team_info">
+                    <h4>Shubham Vaishnav</h4>
+                    <p>Hardware Engineer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/sen.jpg" alt="Manish Sen">
+                </div>
+                <div class="team_info">
+                    <h4>Manish Sen</h4>
+                    <p>Web Developer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team_card">
+                <div class="team_image_wrapper">
+                    <img src="images/amrit.jpg" alt="Amrit Jha" />
+                </div>
+                <div class="team_info">
+                    <h4>Amrit Jha</h4>
+                    <p>Hardware Engineer</p>
+                    <div class="team_social">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta_container">
+        <div class="cta_content">
+            <h2>Ready to Ensure Pure Milk for Your Family?</h2>
+            <p>Join thousands of satisfied customers who trust Milkoscan for their milk quality testing needs</p>
+            <div class="cta_buttons">
+                <button class="btn-primary" onclick="openModal('orderModal')">
+                    <i class="ri-shopping-cart-line"></i> Order Now - ₹2,999
+                </button>
+                <a href="#contact" class="btn-secondary">
+                    <i class="ri-phone-line"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="contact_container" id="contact">
+        <div class="contact_inner">
+            <div class="common_header">
+                <h2 class="section_header">Get In Touch</h2>
+                <p class="section_description">Ready to start your next project? Let's discuss how we can help bring
+                    your vision to life with our
+                    expertise and dedication.</p>
+            </div>
+            <div class="contact_content">
+                <div class="contact_form">
+                    <h3><i class="ri-mail-line"></i> Contact Us</h3>
+                    <div class="contact_success" id="successMessage" style="display: none;">
+                        <i class="ri-check-circle-line"></i>
+                        <span>Thank you! Your message has been sent successfully. We'll get back to you within 24
+                            hours.</span>
+                    </div>
+                    <form id="contactForm" onsubmit="handleContact(event)">
+                        <div class="contact_group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+                            <div class="contact_error">Please enter your full name</div>
+                        </div>
+                        <div class="contact_group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="your.email@company.com"
+                                required>
+                            <div class="contact_error">Please enter a valid email address</div>
+                        </div>
+                        <div class="contact_group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5"
+                                placeholder="Tell us about your project or inquiry..." required></textarea>
+                            <div class="contact_error">Please enter your message</div>
+                        </div>
+                        <button type="submit" class="contact_button">
+                            <i class="ri-send-plane-line"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="contact_info">
+                    <h3><i class="ri-customer-service-line"></i> Contact Information</h3>
+
+                    <div class="contact_item">
+                        <i class="ri-map-pin-line"></i>
+                        <div class="contact_item_content">
+                            <div class="contact_item_label">Office Address</div>
+                            <div class="contact_item_value">Ajmer Road<br>Jaipur, Rajasthan <br>India</div>
+                        </div>
+                    </div>
+
+                    <div class="contact_item">
+                        <i class="ri-phone-line"></i>
+                        <div class="contact_item_content">
+                            <div class="contact_item_label">Phone Number</div>
+                            <div class="contact_item_value">+91 123 456 7890</div>
+                        </div>
+                    </div>
+
+                    <div class="contact_item">
+                        <i class="ri-mail-line"></i>
+                        <div class="contact_item_content">
+                            <div class="contact_item_label">Email Address</div>
+                            <div class="contact_item_value">info@yourcompany.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_col">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Quick Quality Logo" class="logo-image">
+                    <span class="logo-text">Quick Quality</span>
+                </div>
+                <p>
+                    Milk adulteration is a serious issue that affects public health and trust in dairy products.
+                    By staying informed, using technology, and demanding stricter regulations, we can ensure access
+                    to pure, unadulterated milk. Together, we can protect our health and support ethical dairy
+                    practices.
+                </p>
+                <ul class="footer_socials">
+                    <li><a href="https://www.facebook.com"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="https://www.instagram.com"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="https://www.linkedin.com"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="https://www.twitter.com"><i class="ri-twitter-fill"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer_links_container">
+                <div class="footer_column">
+                    <h4>Product</h4>
+                    <ul class="footer_links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Specifications</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">User Manual</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h4>Support</h4>
+                    <ul class="footer_links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repairs</a></li>
+                    </ul>
+                </div>
+                <div class="footer_column">
+                    <h4>Company</h4>
+                    <ul class="footer_links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bar">
+            <p>&copy; 2024 Quick Quality. All rights reserved. | Made in India</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal_overlay" onclick="closeModal('loginModal')"></div>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2>Welcome Back</h2>
+                <button class="modal_close" onclick="closeModal('loginModal')">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="modal_body">
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form_group">
+                        <input type="email" id="loginEmail" name="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="form_group">
+                        <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form_options">
+                        <label class="checkbox_label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot_password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="form_submit">Sign In</button>
+                </form>
+                <div class="form_divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social_login">
+                    <button class="social_btn google" onclick="loginWithGoogle()">
+                        <i class="ri-google-fill"></i> Continue with Google
+                    </button>
+                </div>
+                <div class="form_toggle">
+                    <p>Don't have an account? <a href="#" onclick="switchToRegister()">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal_overlay" onclick="closeModal('registerModal')"></div>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2>Create Account</h2>
+                <button class="modal_close" onclick="closeModal('registerModal')">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="modal_body">
+                <form id="registerForm" onsubmit="handleRegister(event)">
+                    <div class="group" style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
+                        <div class="form_group">
+                            <input type="text" id="registerName" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form_group">
+                            <input type="tel" id="registerPhone" name="phone" placeholder="Enter Phone number" required>
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <input type="email" id="registerEmail" name="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="group" style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
+                        <div class="form_group">
+                            <input type="password" id="registerPassword" name="password" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="form_group">
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <div class="form_options">
+                        <label class="checkbox_label">
+                            <input type="checkbox" name="terms" required>
+                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                    Policy</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="form_submit">Create Account</button>
+                </form>
+                <div class="form_divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social_login">
+                    <button class="social_btn google" onclick="registerWithGoogle()">
+                        <i class="ri-google-fill"></i> Continue with Google
+                    </button>
+                </div>
+                <div class="form_toggle">
+                    <p>Already have an account? <a href="#" onclick="switchToLogin()">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal order_modal">
+        <div class="modal_overlay" onclick="closeModal('orderModal')"></div>
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2>Order Milkoscan</h2>
+                <button class="modal_close" onclick="closeModal('orderModal')">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="modal_body">
+                <div class="product_showcase">
+                    <img src="images/product.png" alt="Milkoscan Device">
+                    <h3>Milkoscan Pro</h3>
+                    <div class="product_price">₹2,999</div>
+                    <div class="product_original-price">₹3,999</div>
+                    <div class="product_discount">Save ₹1,000</div>
+                </div>
+                <div class="product_features">
+                    <h4>What's Included:</h4>
+                    <ul class="product_features-list">
+                        <li><i class="ri-check-line"></i> Milkoscan Device</li>
+                        <li><i class="ri-check-line"></i> USB Charging Cable</li>
+                        <li><i class="ri-check-line"></i> User Manual</li>
+                        <li><i class="ri-check-line"></i> 1 Year Warranty</li>
+                        <li><i class="ri-check-line"></i> Free Mobile App</li>
+                        <li><i class="ri-check-line"></i> Customer Support</li>
+                    </ul>
+                </div>
+                <form id="orderForm" onsubmit="handleOrder(event)">
+                    <div class="form_group">
+                        <label for="orderName">Full Name</label>
+                        <input type="text" id="orderName" name="name" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="orderEmail">Email Address</label>
+                        <input type="email" id="orderEmail" name="email" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="orderPhone">Phone Number</label>
+                        <input type="tel" id="orderPhone" name="phone" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="orderAddress">Shipping Address</label>
+                        <textarea id="orderAddress" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form_group">
+                        <label for="orderQuantity">Quantity</label>
+                        <select id="orderQuantity" name="quantity" onchange="updateTotal()">
+                            <option value="1">1 Unit - ₹2,999</option>
+                            <option value="2">2 Units - ₹5,499 (Save ₹499)</option>
+                            <option value="3">3 Units - ₹7,999 (Save ₹998)</option>
+                        </select>
+                    </div>
+                    <div class="order_total">
+                        <div class="total_row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹2,999</span>
+                        </div>
+                        <div class="total_row">
+                            <span>Shipping:</span>
+                            <span>FREE</span>
+                        </div>
+                        <div class="total_row total_final">
+                            <span>Total:</span>
+                            <span id="total">₹2,999</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="form_submit order_submit">
+                        <i class="ri-shopping-cart-2-line"></i> Place Order
+                    </button>
+                </form>
+                <div class="payment_info">
+                    <p><i class="ri-shield-check-line"></i> Secure checkout with 256-bit SSL encryption</p>
+                    <p><i class="ri-truck-line"></i> Free shipping across India</p>
+                    <p><i class="ri-money-dollar-circle-line"></i> 30-day money-back guarantee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal_overlay" onclick="closeModal('successModal')"></div>
+        <div class="modal_content success_content">
+            <div class="success_icon">
+                <i class="ri-check-line"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your order. We'll send you a confirmation email shortly with tracking details.</p>
+            <button class="btn-primary" onclick="closeModal('successModal')">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="sw.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
