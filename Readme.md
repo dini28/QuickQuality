@@ -2,6 +2,8 @@
 
 Quick Quality - Milkoscan is a modern, responsive landing page for a portable milk adulteration detection device. The site highlights the dangers of milk adulteration, showcases the Milkoscan product, and provides features such as team introduction, contact form, and order modal.
 
+![alt text](<QQ.png>)
+
 ## Features
 
 - **Responsive Design:** Works seamlessly on desktop and mobile devices.
@@ -31,6 +33,8 @@ images/
   shubham.jpg
 ```
 
+<video controls src="QQ.mp4" title="Video"></video>
+
 ## Getting Started
 
 1. **Clone or Download the Repository**
@@ -59,11 +63,5 @@ images/
 ## Demo Credentials
 
 - The login and registration forms are for demonstration only and do not connect to a backend.
-
-## License
-
-This project is for demonstration and educational purposes.
-
----
 
 Made with ❤️ by the Quick Quality Team.
