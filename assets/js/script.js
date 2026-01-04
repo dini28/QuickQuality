@@ -1,4 +1,3 @@
-// Data Arrays
 const adulterantsData = [
     {
         icon: 'ri-water-percent-line',
@@ -140,19 +139,18 @@ const teamData = [
     }
 ];
 
-// Main Application Logic
 const App = {
     init() {
         this.renderAll();
-        // Initialize observers AFTER rendering
-        // Use a small timeout to ensure DOM is ready
+
+        // Wait for DOM to be fully ready before setting up interactions
         requestAnimationFrame(() => {
             this.setupObservers();
             this.setupEventListeners();
             this.setupMobileMenu();
             this.setupScrollSpy();
-            this.setupForms(); // New
-            this.registerServiceWorker(); // New
+            this.setupForms();
+            this.registerServiceWorker();
             this.injectStyles();
         });
     },
@@ -162,8 +160,6 @@ const App = {
         this.renderFeatures();
         this.renderTeam();
     },
-
-    // ... (render methods remain same)
 
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
@@ -180,7 +176,6 @@ const App = {
     },
 
     setupForms() {
-        // Contact Form
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
@@ -188,17 +183,15 @@ const App = {
                 const btn = contactForm.querySelector('button');
                 const originalText = btn.innerHTML;
 
-                // Loading State
                 btn.innerHTML = '<i class="ri-loader-4-line spin"></i> Sending...';
                 btn.disabled = true;
 
-                // Simulate API call
+                // In production, replace this with actual API call
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.disabled = false;
                     contactForm.reset();
 
-                    // Show Success Toast
                     const toast = document.getElementById('successMessage');
                     if (toast) {
                         toast.style.display = 'flex';
@@ -210,7 +203,6 @@ const App = {
             });
         }
 
-        // Order Form
         const orderForm = document.getElementById('orderForm');
         if (orderForm) {
             orderForm.addEventListener('submit', (e) => {
@@ -229,7 +221,7 @@ const App = {
                         window.closeModal('orderModal');
                         orderForm.reset();
                         btn.innerHTML = originalText;
-                        btn.style.background = ''; // Reset to CSS default
+                        btn.style.background = '';
                         btn.disabled = false;
                         alert('Order placed successfully! Check your email for details.');
                     }, 2000);
@@ -307,22 +299,19 @@ const App = {
             });
         }, observerOptions);
 
-        // Observe elements that need scroll animation
         const elements = document.querySelectorAll('.scroll-reveal');
         if (elements.length > 0) {
             elements.forEach((el, index) => {
-                // Add staggered delay via inline style
+                // Stagger the animations so they don't all happen at once
                 el.style.transitionDelay = `${(index % 3) * 0.1}s`;
                 observer.observe(el);
             });
         }
 
-        // Ensure static headers are also revealed if they have animation classes
         document.querySelectorAll('.section_header_group').forEach(el => observer.observe(el));
     },
 
     setupEventListeners() {
-        // Sticky Navbar
         const navbar = document.getElementById('navbar');
         if (navbar) {
             window.addEventListener('scroll', () => {
@@ -330,7 +319,6 @@ const App = {
             });
         }
 
-        // Social Link Ripple Effect
         document.addEventListener('click', (e) => {
             const link = e.target.closest('.team_social a');
             if (link) {
@@ -376,7 +364,7 @@ const App = {
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                // Offset for navbar height (approx 100px)
+                // Adjust for navbar height to highlight links at the right time
                 if (scrollValues >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
@@ -419,7 +407,6 @@ const App = {
             @keyframes ripple {
                 to { transform: scale(4); opacity: 0; }
             }
-            /* Scroll Reveal Base State */
             .scroll-reveal {
                 opacity: 0;
                 transform: translateY(20px);
@@ -434,16 +421,13 @@ const App = {
     }
 };
 
-// Initialize App
 document.addEventListener('DOMContentLoaded', () => App.init());
 
-// Global Modal Functions
 window.openModal = (modalId) => {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'flex';
-        // Force reflow
-        void modal.offsetWidth;
+        void modal.offsetWidth; // Force browser to recalculate layout
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
