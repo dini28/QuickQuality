@@ -38,6 +38,11 @@ self.addEventListener('activate', (event) => {
 
 // Fetch Event - Stale-While-Revalidate Strategy
 self.addEventListener('fetch', (event) => {
+    // Skip caching for local development to ensure changes are immediately visible
+    if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1') {
+        return event.respondWith(fetch(event.request));
+    }
+
     event.respondWith(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.match(event.request).then((cachedResponse) => {

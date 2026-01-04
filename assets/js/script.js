@@ -332,6 +332,7 @@ const App = {
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
         const navOverlay = document.getElementById('nav-overlay');
+        const navClose = document.getElementById('nav-close');
         const navLinks = document.querySelectorAll('.nav-link');
 
         if (!hamburger || !navMenu) return;
@@ -344,6 +345,7 @@ const App = {
         };
 
         hamburger.addEventListener('click', toggleMenu);
+        if (navClose) navClose.addEventListener('click', toggleMenu);
         if (navOverlay) navOverlay.addEventListener('click', toggleMenu);
 
         navLinks.forEach(link => {

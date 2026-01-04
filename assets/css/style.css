@@ -407,7 +407,7 @@ html {
 .bar {
     width: 25px;
     height: 3px;
-    background: rgba(76, 175, 80, 0.1);
+    background: var(--primary-dark);
     border-radius: 3px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -423,6 +423,11 @@ html {
 
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation Overlay */
+.nav-close {
+    display: none;
 }
 
 /* Overlay for mobile menu */
@@ -477,6 +482,21 @@ html {
 
     .navbar.scrolled .nav-menu {
         top: 0;
+    }
+
+    .nav-close {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: var(--secondary-dark);
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background: rgba(76, 175, 80, 0.1);
+        transition: all 0.3s ease;
+        line-height: 1;
     }
 }
 
