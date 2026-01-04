@@ -1559,8 +1559,6 @@ body {
 
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
-
-    /* Navigation */
     .navbar-container {
         padding: 0 1.5rem;
     }
@@ -1701,10 +1699,5 @@ body {
 
     .modal_card {
         padding: 1.5rem;
-    }
-
-    /* Stats */
-    .stat_num {
-        font-size: 2.5rem;
     }
 }
